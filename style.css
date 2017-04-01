@@ -1,0 +1,1324 @@
+
+* {
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;         /* Opera/IE 8+ */
+}
+#css-zen-garden{
+background: rgba(193, 39, 45, 0.1); /* For browsers that do not support gradients */        
+background: -webkit-linear-gradient(-40deg, rgba(109, 168, 157, 0.7), rgba(193, 39, 45, 0.1)); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(-40deg, rgba(109, 168, 157, 0.7), rgba(193, 39, 45, 0.1)); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(-40deg, rgba(109, 168, 157, 0.7), rgba(193, 39, 45, 0.1)); /* For Firefox 3.6 to 15 */
+background: linear-gradient(-40deg, rgba(109, 168, 157, 0.7), rgba(193, 39, 45, 0.1)); /* Standard syntax (must be last) */
+}
+html, body {
+padding: 0;
+margin: 0;
+}
+body {
+color: black;
+font-family: 'Lucida Sans Unicode', sans-serif;
+}
+body p{
+    text-align: justify;
+}
+a {
+color: rgb(193, 39, 45);
+-webkit-transition: all 0.25s ease-out;
+-moz-transition: all 0.25s ease-out;
+transition: all 0.25s ease-out;
+text-decoration: none;
+}
+a:hover, a:focus {
+color: #6DA89D;
+text-decoration: underline;
+}
+header {
+background: 100% 0 url(Zen-Sand.jpg) no-repeat; 
+background-attachment: scroll;
+background-size: cover;
+background-position: top left;
+}
+h1, h2 {
+margin: 0;
+color: rgba(193, 39, 45, 0.9);
+font-weight: 900;
+}
+h1 {
+font-family: 'Prompt', sans-serif;
+font-size: 430%;
+text-transform: uppercase;
+}
+h2 {
+font-family: 'Syncopate', sans-serif;
+display: block;
+color: #6DA89D;
+font-size: 120%;
+font-style: italic;
+text-align: left;
+text-decoration: none;
+}
+h3 {
+margin: 2em 0 0 0;
+color: #6DA89D;
+padding-left: 8%;
+text-shadow: 1px 1px rgb(193, 39, 45);
+font-family: 'Lucida Sans Unicode', sans-serif;
+font-size: 300%;
+font-weight: normal;
+text-transform: uppercase;
+padding-top: 1.5%;
+padding-bottom: 0.5%;
+background-image: url(http://orig12.deviantart.net/368b/f/2013/183/0/f/flat_hot_stones_by_evxan-d6axctu.png);
+background-repeat: no-repeat;
+background-position: 1% center;
+background-size: 6%;
+}
+body p {
+margin: 0.75em 0;
+line-height: 2;
+font-size: 1.2em;
+}
+blockquote {
+width: 40%;
+font-size: 2.65em;
+letter-spacing: .075em;
+float: left;
+padding-top: -3%;
+padding-bottom: -2%;
+margin-left: 30%;
+text-align: center;
+border-top: 2px dotted #858585;
+border-bottom: 2px dotted #858585;
+}
+.summary {
+font-size: 16px;
+letter-spacing: .075em;
+float: left;
+padding-top: 2%;
+padding-bottom: 1%;
+padding-right: 10%;
+text-align: center;
+}
+.explanation #myImg {
+border-radius: 5px;
+cursor: pointer;
+transition: 0.3s;
+height: auto;
+padding: 15px;
+background-color: rgba(193, 39, 45, 0.4);
+box-shadow: 7px 7px 7px rgba(109, 168, 157, 0.7);
+margin:auto;
+width: 28%;
+}
+#myImg:hover {
+opacity: 0.8;
+}
+#myImg img{
+max-height: 80%;
+}
+.modal {
+display: none; 
+position: fixed; 
+z-index: 1; 
+left: 10%;
+top: 0;
+width: 100%; 
+height: 100%;
+overflow: auto; 
+background-color: rgba(193, 39, 45, 0.9);
+}
+.modal-content {
+margin: auto;
+display: block;
+height: 100%; 
+padding-right: 35%;
+-webkit-animation-name: zoom;
+-webkit-animation-duration: 0.6s;
+animation-name: zoom;
+animation-duration: 0.6s;
+}
+.tooltip {
+position: relative;
+display: inline-block;
+border-bottom: 1px dashed black;
+}
+.tooltip .tooltiptext {
+visibility: hidden;
+width: 180px;
+font-size: 10px;
+background-color: rgba(109, 168, 157, 0.95);
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 5px 0;
+position: absolute;
+z-index: 1;
+top: 150%;
+left: 50%;
+margin-left: -90px;
+text-transform: uppercase;
+}
+.tooltip .tooltiptext::after {
+content: "";
+position: absolute;
+bottom: 100%;
+left: 50%;
+margin-left: -5px;
+border-width: 5px;
+border-style: solid;
+border-color: transparent transparent black transparent;
+}
+.tooltip:hover .tooltiptext {
+visibility: visible;
+}
+div.turp{
+width: 100%
+}
+@-webkit-keyframes zoom {
+from {-webkit-transform:scale(0)} 
+to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+from {transform:scale(0)} 
+to {transform:scale(1)}
+}
+.close {
+position: absolute;
+top: 15px;
+right: 35px;
+color: black;
+font-size: 40px;
+font-weight: bold;
+transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+color: #6DA89D;
+text-decoration: none;
+cursor: pointer;
+}
+
+.page-wrapper {
+position: relative;
+}
+.summary, .preamble {
+width: 100%;
+margin: 0 auto;
+}
+.supporting h3, .supporting p {
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+}
+.summary {
+padding-top: 2%;
+}
+.summary p {
+width:100%;
+}
+.intro a, .intro a:visited {
+position: relative;
+display: inline-block;
+color: rgb(193, 39, 45);
+font-family: 'Lucida Sans Unicode', sans-serif;
+text-transform: uppercase;
+}
+.intro a:hover, .intro a:focus {
+z-index: 2;
+color: #6DA89D;
+}
+.intro a::before {
+display: inline-block;
+position: absolute;
+top: 6px;
+left: 2px;
+padding: 2px;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+-o-border-radius: 2px;
+font-family: 'Lucida Sans Unicode';
+font-weight: normal;
+text-transform: none;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-webkit-transition: all 0.25s ease-out;
+-moz-transition: all 0.25s ease-out;
+transition: all 0.25s ease-out;
+}
+abbr{
+border: none;
+text-transform: uppercase;
+font-size: 1em;
+letter-spacing: 0.02em;
+color:rgb(193, 39, 45) ;
+}
+abbr:hover{
+color: #6DA89D;
+}
+.design-selection h3 {
+display:none
+}
+.design-selection {
+padding-left: 0px;
+padding-top: 20%;
+float: left;
+height: 100%;
+width: 80%;
+font-size: 105%;
+color: #6DA89D;
+line-height: 15px;
+list-style-type: none;
+max-width: 250px;
+}
+.design-selection li{
+background-color: rgba(109, 168, 157, 0.2);
+background-color: rgba(193, 39, 45, 0.1);
+}
+.design-selection li {
+float: left;
+color: #6DA89D;
+border-right: solid 1px #6DA89D;
+font-style: oblique;
+padding-bottom: 5%;
+padding-top: 5%;
+list-style: none;
+background-image: url(http://orig12.deviantart.net/368b/f/2013/183/0/f/flat_hot_stones_by_evxan-d6axctu.png);
+background-repeat: no-repeat;
+background-position: 18% 20%;
+background-size: 22px;
+border-radius: 50%
+}
+.design-selection li a {
+display: block;
+line-height: 140%;
+color: #000;
+padding: 7% 23%;
+text-decoration: none;
+font-size: 70%
+}
+.design-selection li a.active {
+color: rgb(193, 39, 45);
+}
+.design-selection li a:hover:not(.active) {
+color: rgb(193, 39, 45);
+}
+.design-selection li:hover {
+color: rgb(193, 39, 45);
+border-color: rgb(193, 39, 45);
+font-style: oblique;
+background-color: rgba(193, 39, 45, 0.3);
+}
+.sidebar h3 {
+display: none;
+}
+.sidebar ul {
+margin: 0;
+padding-bottom: 5%;
+list-style: none;
+overflow: hidden;
+}
+.zen-resources {
+overflow: hidden;
+}
+.zen-resources li {
+border-top: solid 1px #6DA89D;
+font-style: normal;
+}
+.zen-resources li:last-child {
+float: none;
+width: auto;
+}
+.supporting .requirements {
+width: 100%;
+padding-right: 0;
+padding-left: 0;
+padding-top: 0;
+}
+.supporting .requirements a {
+text-decoration: none;
+}
+.requirements p:last-child {
+margin: 0;
+font-size: 15px;
+text-align: center;
+}
+.requirements p:last-child a {
+font-style: normal;
+}
+footer {
+clear: both;
+padding: 3em 10%;
+color: rgb(193, 39, 45);
+text-align: center;
+font-style: italic;
+max-height: 100px;
+padding: 20px;
+}
+footer a {
+font-style: normal;
+display: inline;
+max-height: 20px;
+width: 20px;
+overflow: hidden;
+max-width: 10px;
+background-color: rgba(109, 168, 157, 0.4);
+padding: 25px;
+color: rgb(193, 39, 45);    
+border-radius: 50%;
+text-align: justify;
+-webkit-transition: color 0.25s ease-out, box-shadow 0.25s ease-out;
+-moz-transition: color 0.25s ease-out, box-shadow 0.25s ease-out;
+transition: color 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+footer a:link, a:visited {
+padding: 15px ;
+text-align: center;
+text-decoration: none;
+box-shadow: 7px 7px 3px rgba(109, 168, 157, 0.7);
+}
+footer a:hover, a:active {
+padding: 15px 30px;
+box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6);
+color: rgb(193, 39, 45);    
+}
+footer a::before {
+display: block;
+position: absolute;
+top: 3px;
+left: 0;
+overflow: visible;
+font-size: 10px;
+text-indent: 0;
+speak: none;
+font-weight: normal;
+text-transform: none;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+}
+
+.tooltips {
+position: relative;
+display: inline-block;
+border-bottom: 1px dotted black;
+}
+.tooltips .tooltiptexts {
+visibility: hidden;
+width: 120px;
+background-color: rgba(109, 168, 157, 0.95);
+color: white;
+text-align: center;
+border-radius: 6px;
+padding: 5px 0;
+position: absolute;
+z-index: 1;
+bottom: 150%;
+left: 50%;
+margin-left: -60px;
+}
+.tooltips .tooltiptexts::after {
+content: "";
+position: absolute;
+top: 100%;
+left: 50%;
+margin-left: -5px;
+border-width: 5px;
+border-style: solid;
+border-color: black transparent transparent transparent;
+}
+.tooltips:hover .tooltiptexts {
+visibility: visible;
+}
+.tooltipx {
+position: relative;
+display: inline-block;
+border-bottom: 1px dashed black;
+}
+.tooltipx .tooltiptextx {
+visibility: hidden;
+width: 180px;
+font-size: 10px;
+background-color: rgba(109, 168, 157, 0.95);
+color: #fff;
+text-align: center;
+border-radius: 6px;
+position: absolute;
+z-index: 1;
+top: 150%;
+left: 50%;
+margin-left: -90px;
+text-transform: uppercase;
+}
+.tooltipx .tooltiptextx::after {
+content: "";
+position: absolute;
+bottom: 100%;
+left: 50%;
+border-style: solid;
+border-color: transparent transparent black transparent;
+}
+.tooltipx:hover .tooltiptextx {
+visibility: visible;
+}
+.res{
+width:100%;
+margin-top: -5.2%;
+background-color: rgba(193, 39, 45, 0.04);
+}
+.res ul {
+width:70%;
+margin:0;
+margin-left: 10%;
+margin-right: 20%;
+list-style-type: none;
+overflow: hidden;
+text-align: center; 
+}
+.res h3{
+display:none;
+}
+.res li {
+width: 20%;
+display: inline;
+float:left;
+padding: 5px 0px;
+text-decoration: none;
+border-top: 1px solid #6DA89D;
+border-bottom: 1px solid #6DA89D;
+border-right: 3px solid #6DA89D;
+list-style: none;
+background-image: url(http://orig12.deviantart.net/368b/f/2013/183/0/f/flat_hot_stones_by_evxan-d6axctu.png);
+background-repeat: no-repeat;
+background-position: 5% center;
+background-size: 30px;
+text-align: center;
+border-radius: 50%;
+}
+.res li:hover{
+border-style: none;
+border-top: 1px solid rgb(193, 39, 45);
+border-bottom: 1px solid rgb(193, 39, 45);
+border-radius: 50%;
+background-color: rgba(109, 168, 157, 0.3);
+}
+.res li a:hover{
+font-size: 100%;
+color: rgb(193, 39, 45)
+}
+.res li a {
+width: 100%;
+display: inline-block;
+text-align: center;
+padding: 15px 15px;
+text-decoration: none;
+font-weight: bold;
+font-style: italic;
+font-size: 140%;
+}
+.page-wrapper {  
+padding-bottom: 3em;
+display: block;
+position: relative;
+}
+.page-wrapper::after {
+content: "";
+background: url(Zen-sand.jpg);
+background-repeat: no-repeat;
+background-position: top left;
+background-size: 100%;
+opacity: 0.1;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+position: absolute;
+z-index: -1;   
+}
+.design-archives li{
+list-style: none;
+}
+.design-archives li a {
+float: left;
+padding: 0.5% 1%;
+text-decoration: none;
+}
+.design-archives a, .design-archives a:visited {
+background-color: rgba(193, 39, 45, 0.2);
+color: #6DA89D;
+}
+.design-archives .viewall a {
+width: 17%;
+height: auto;
+text-align: center;  
+text-decoration: none;
+text-transform: uppercase;
+border-radius: 5px;
+font-size: 150%;
+color: #6DA89D;
+font-weight: 300;
+border-radius: 50%;
+font-style: italic;
+}
+.design-archives .previous a, .design-archives .next a {
+display: block;
+overflow: hidden;
+border-radius: 50%;
+white-space: nowrap;
+width: 12%;
+margin-left: 2%;
+text-align: center;
+background-color: rgba(193, 39, 45, 0.1);
+font-style: italic;
+}
+.design-archives .previous a::before {
+content: "\f04a";
+font-family: FontAwesome;
+font-size: 160%;
+font-style: normal;
+}
+.design-archives .next a::after {
+visibility: visible;
+content: "\f04e";
+font-family: FontAwesome;
+font-size: 160%;
+font-style: normal;
+}
+.design-archives .next a:hover::after {
+color: rgb(193, 39, 45);
+font-size: 180%;
+text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+.design-archives .previous a:hover::before {
+color: rgb(193, 39, 45);
+font-size: 180%;
+text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+.design-archives .viewall a:hover {
+color: rgb(193, 39, 45);
+font-size: 160%;
+text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+.design-archives .next a:hover, .previous a:hover {
+background-color: rgba(109, 168, 157, 0.3);
+box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+border-color: #6DA89D;
+text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+font-size: 120%;
+}
+.design-archives .viewall a:hover {
+background-color: rgba(109, 168, 157, 0.3);
+box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+border-color: #6DA89D;
+}
+.design-archives {
+position: absolute;
+top: 36%;
+left: -1.7%;
+width: 100%;
+height: 70px;
+z-index: 1; 
+}
+.design-archives ul{
+display: flex;
+flex-direction: column;
+padding-top: 2%
+}
+.next a, .previous a{
+border-right: 6px solid rgb(193, 39, 45);
+border-radius: 50%;
+}
+.design-archives li a{
+padding-bottom: 1%;
+padding-top: 1%;
+}
+.design-archives .viewall a{
+border-style: none;
+border-right: 6px solid rgb(193, 39, 45);
+border-left: 6px solid rgb(193, 39, 45);
+}
+.previous {
+order: 1;
+}
+.viewall {
+order: 2
+}
+.next {
+order:3
+}
+.next a, .previous a, .viewall a{
+display: block;
+}
+.design-selection li:first-child {
+border-top: none
+}
+.design-selection li:last-child {
+border-bottom: solid 1px #6DA89D;
+}
+.summary a{
+border-radius: 50%;
+border-top: solid 0.2px #6DA89D;
+z-index: 2;
+}
+.summary a:hover{
+text-decoration: none;
+}
+.summary p{
+position: relative;
+z-index: 2;
+}
+.requirements {
+  display: block;
+  position: relative;
+}
+.requirements::after {
+  content: "";
+  background: url(circle.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  opacity: 0.07;
+  box-shadow: 0 0 18px 18px rgba(109, 168, 157, 0.4) inset;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+
+
+
+
+@media only screen and (max-width: 700px){
+.header{
+width: 100%;
+height: 30%
+}
+.modal-content {
+width: 100%;
+}
+h1 {
+padding-top: 3%;
+font-size: 250%;
+padding-bottom: 1%
+}
+h2{
+    padding-bottom: 5%;
+}
+.res {
+    width: 100%;
+}
+.res li{
+    padding-left: 0;
+    padding-right: 0
+}
+footer small{
+    display: none;
+    padding-bottom: -20%
+}
+header{
+    height: 50%
+}
+.design-archives li{
+    width: 250%;
+}
+.design-archives .viewall a {
+font-size: 80%
+}
+.design-archives .next a, .previous a{
+font-size: 60%
+}
+.design-archives .viewall a:hover{
+font-size: 100%
+}
+.design-archives .next a:hover, .previous a:hover{
+font-size: 70%
+}
+.res{
+    width: 100%;
+}
+.res ul {
+width:100%;
+margin:0;
+padding: 0;
+overflow: hidden;
+}
+.res li a{
+padding: 0;
+font-size: 45%;
+line-height: 100%
+}
+.res li a:hover{
+    font-size: 50%;
+}
+blockquote {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 30%
+}
+.design-selection ul {
+width: 270%;
+display: flex;
+flex-direction: row;
+padding-left:5%;
+}
+.design-selection li{
+    width: 130%;
+    background-image: none;
+}
+.design-selection li a{
+line-height: 260%;
+}
+.design-selection li{
+    font-size: 60%;
+    padding-left: 2%
+}
+.design-selection li a{
+    margin-left: -3%;
+    margin-top: 4%
+}
+.design-archives .viewall a {
+width: 100%;
+}
+.design-archives .next a {
+width: 100%;
+}
+.design-archives .next {
+padding-top: 45%
+}
+.design-archives .previous a {
+width: 100%;
+}
+.design-archives ul {
+padding-right:5%;
+
+}
+.preamble {
+    padding-top: 55%
+}
+.design-archives{
+    padding-top: 40%
+}
+h3{
+    font-size: 200%
+}
+}
+
+/* low-res CSS */
+@media only screen and (max-width: 600px) {
+
+.summary p:last-child {
+display: none;
+}
+h1 {
+margin-top: 10%;
+font-size: 80%;
+}
+h2::before {
+padding: 25px;
+}
+.requirements p:last-child {
+padding: 1em 6%;
+}
+}
+
+@media only screen and (max-width: 500px) {
+
+header {
+height: 250px;
+padding-top: 0;
+}
+h1 {
+margin: 0;
+}
+h1::before {
+display: block;
+left: 50%;
+width: 50px;
+height: 50px;
+margin: 0 0 0 -25px;
+padding: 0 0 35px 0;
+}
+h2::before {
+padding: 0;
+}
+.design-selection li, .zen-resources li {
+padding: 1em 5%;
+}
+footer a {
+margin: 0 0.5em;
+}
+}
+
+/* mid-res CSS */
+@media only screen and (max-width: 1132px) {
+p, li {
+font-size: 1.2em;
+}
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1150px) {
+
+.requirements p:last-child {
+padding-bottom: 2em;
+padding-top: 2em;
+}
+footer {
+padding: 3em 0;
+}
+footer a {
+width: 52px;
+height: 52px;
+padding: 52px 0 0 0;
+margin: 0 2em;
+}
+footer a::before {
+font-size: 48px;
+}
+}
+
+
+/* high-res CSS */
+@media only screen and (min-width: 1132px) {
+body {
+background-attachment: scroll;
+background-size: cover;
+font-size: 100%;
+}
+header {
+width: 100%;
+height: 310px;
+padding: 0 10%;
+text-align: left;
+}
+header::before, header::after {
+display: block;
+content: " ";
+position: absolute;
+z-index: 3;
+top: 9px;
+left: 0;
+width: 100%;
+height: 7px;
+}
+header::after {
+top: 306px;
+height: 4px;
+}
+h1 {
+display: inline-block;
+position: relative;
+margin: 15px 0 0 0;
+padding: 60px 0 5px 0;
+font-size:380%
+}
+h2 {
+display: block;
+margin: 0;
+padding: 5px 0 60px 70px;
+}
+h3{
+    font-size:320%
+}
+p {
+font-size: 1em;
+}
+nav, .supporting {
+display: inline;
+}
+.summary, .preamble, .supporting div, .requirements h3, .requirements p {
+float: left;
+clear: left;
+width: 80%;
+padding: 1em 0 1em 20%;
+}
+.explanation h3, .explanation p,
+.participation h3, .participation p,
+.benefits h3, .benefits p
+{
+width: 100%;
+}
+.requirements p
+{
+width: 80%;
+}
+.summary {
+padding-top: 2%;
+}
+.requirements h3, .requirements p {
+margin: 0;
+padding-bottom: 0;
+}
+div.participation, div.benefits, div.requirements {
+width: 80%;
+margin: 0;
+}
+.intro h3, .supporting h3 {
+margin-top: 0;
+}
+.intro p:last-child, .supporting p:last-child {
+margin-bottom: 0;
+}
+.design-selection, .zen-resources {
+position: absolute;
+top: 0; 
+bottom: 190%;
+left: 0;
+padding: 0 0 10px 0;
+margin: 0;
+overflow: visible;
+max-width: 17%;
+}
+.sidebar li {
+float: none;
+width: auto;
+padding-left: 0;
+padding-right: 0;
+}
+.zen-resources {
+position: absolute;
+left: 0;
+width: 250px;
+background-color: #6DA89D;
+}
+.zen-resources h3 {
+display: none;
+}
+.zen-resources ul {
+width: 300px;
+}
+.zen-resources li {
+padding: 1.5em 0 1.25em 0;
+margin: 0;
+}
+.design-selection li{
+border-right: 6px solid #6DA89D;
+border-radius: 50%;
+width: 95%
+}
+.design-selection li{
+line-height: 70%
+}
+.design-selection .design-name:first-letter{
+font-size: 160%;
+color: rgb(193, 39, 45);
+font-weight: 100
+}
+.design-selection .design-name:hover:first-letter{
+font-size: 160%;
+color: black;
+}
+.design-selection .design-name{
+font-style:normal;
+font-size: 100%;
+}
+p:first-letter{
+font-size: 160%;
+color: rgb(193, 39, 45);
+}
+.design-selection ul{
+padding-top: 205%;
+padding-left:2%;
+}
+.design-selection li{
+padding-left:5%;
+}
+.requirements h3{
+color: #6DA89D;
+padding-left: 25%;
+text-shadow: 1px 1px rgb(193, 39, 45);
+background-image: url(http://orig12.deviantart.net/368b/f/2013/183/0/f/flat_hot_stones_by_evxan-d6axctu.png);
+background-repeat: no-repeat;
+background-position: 27% 70%;
+background-size: 5%;
+}
+.design-selection{
+    padding-top: 5%
+}
+.design-selection li a{
+    font-size: 70%
+}
+.design-archives .next a, .previous a{
+font-size: 80%
+}
+.design-archives .viewall a{
+    font-size: 90%
+}
+.design-archives .viewall a:hover{
+    font-size: 110%
+}
+.design-archives .next a:hover, .previous a:hover{
+font-size: 83%
+}
+h1{
+    font-size: 400%
+}
+.res li a {
+   font-size: 70%;
+   line-height: 70%
+}
+.res li a:hover {
+   font-size: 80%
+}
+}
+
+@media only screen and (min-width: 1150px) {
+footer a {
+width: 76px;
+height: 76px;
+padding: 76px 0 0 0;
+margin: 0 3em;
+}
+footer a::before {
+font-size: 72px;
+}
+.res {
+    padding-top: 2.5%;
+    height:10%;
+    margin-top:-2.5%
+}
+.res ul{
+    line-height:10%;
+    margin-bottom:0;
+    margin-top:-2.5%
+}
+h1{
+    font-size:450%
+}
+.design-archives{
+    padding-left: 1%
+}
+}
+@media only screen and (max-width: 320px) {
+h1 {
+    padding-top: 5%;
+    font-size: 150%;
+    padding-left: 5%;
+    padding-bottom: 3%;
+}
+h2 {
+font-size: 70%;
+padding-bottom: 0%;
+padding-left: 2%;
+padding-bottom:7%
+}
+body{
+width: 100%;
+}
+h3{
+font-size:90%
+}
+.explanation #myImg {
+padding: 5px;
+box-shadow: 0 0 0 rgba(109, 168, 157, 0.7);
+width: 40%;
+float: none;
+margin: 0px 0px 0 0px
+}
+.modal {
+left: 0%;
+top: 0;
+width: 100%; 
+height: 60%;
+}
+.modal-content {
+width: 100%; 
+height: auto;
+padding-right: 35%;
+}
+body p{
+font-size:80%
+}
+.design-selection li, li a{
+font-size: 80%;
+}
+footer {
+padding: 2em 5%;
+padding-bottom: 0
+}
+footer a {
+width: 15%;
+height: 15%;
+padding: 0 0 0 0;
+margin: 0 0.5em;
+}
+footer a {
+font-size: 5%;
+}
+footer small{
+display: none
+}
+footer a {
+font-style: normal;
+display: inline;
+width: 20px;
+overflow: hidden;
+max-width: 10px;
+padding: 25px;
+}
+footer a:hover, a:active {
+padding: 27px 7px;
+box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6);
+color: rgb(193, 39, 45);    
+}
+header{
+    height: 50%
+}
+.design-archives{
+    padding-top: 15%
+}
+.design-archives li{
+    width: 280%;
+}
+.design-archives .viewall a {
+font-size: 70%
+}
+.design-archives .next a, .previous a{
+font-size: 40%
+}
+.design-archives .viewall a:hover{
+font-size: 80%
+}
+.design-archives .next a:hover, .previous a:hover{
+font-size: 50%
+}
+.res{
+    width: 100%;
+    height: 70%
+}
+.res li{
+    background-image: none;
+}
+.res ul {
+width:100%;
+margin:0;
+padding: 0;
+overflow: hidden;
+}
+.res li a{
+padding: 0;
+font-size: 30%;
+line-height: 100%
+}
+.res li a:hover{
+    font-size: 35%;
+}
+blockquote {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 30%
+}
+.design-selection ul {
+padding-right: 20%;
+}
+.design-selection ul {
+width: 100%;
+display: flex;
+flex-direction: row;
+padding-left:5%;
+}
+.design-selection li{
+    width: 130%
+}
+.design-archives .viewall a {
+width: 100%;
+}
+.design-archives .next a {
+width: 100%;
+}
+.design-archives .next {
+padding-top: 45%
+}
+.design-archives .previous a {
+width: 100%;
+}
+.design-archives ul {
+padding-right:5%;
+
+}
+.preamble {
+    padding-top: 55%
+}
+}
+/* high-DPI adjustments */
+@media
+(min--moz-device-pixel-ratio: 1.5),
+(-o-min-device-pixel-ratio: 3 / 2),
+(-webkit-min-device-pixel-ratio: 1.5),
+(min-device-pixel-ratio: 1.5),
+(min-resolution: 1.5dppx) {
+.design-archives nav {
+left: 0;
+width: 20%;
+}
+}
+
+.res{
+width:100%;
+margin-top: -5.2%;
+background-color: rgba(193, 39, 45, 0.04);
+}
+.res ul {
+width:70%;
+margin:0;
+margin-left: 10%;
+margin-right: 20%;
+list-style-type: none;
+overflow: hidden;
+text-align: center; 
+}
+.res h3{
+display:none;
+}
+.res li {
+width: 20%;
+display: inline;
+float:left;
+padding: 5px 0px;
+text-decoration: none;
+border-top: 1px solid #6DA89D;
+border-bottom: 1px solid #6DA89D;
+border-right: 3px solid #6DA89D;
+list-style: none;
+background-image: url(http://orig12.deviantart.net/368b/f/2013/183/0/f/flat_hot_stones_by_evxan-d6axctu.png);
+background-repeat: no-repeat;
+background-position: 7% center;
+background-size: 30px;
+text-align: center;
+border-radius: 50%;
+}
+.res li:hover{
+border-style: none;
+border-top: 1px solid rgb(193, 39, 45);
+border-bottom: 1px solid rgb(193, 39, 45);
+border-radius: 50%;
+background-color: rgba(109, 168, 157, 0.3);
+}
+.res li a:hover{
+font-size: 100%;
+color: rgb(193, 39, 45)
+}
+.res li a {
+width: 100%;
+display: inline-block;
+text-align: center;
+padding: 15px 15px;
+text-decoration: none;
+font-weight: bold;
+font-style: italic;
+font-size: 90%;
+}.res {
+    padding-top: 2.5%;
+    height:10%;
+    margin-top:-2.8%
+}
+.res ul{
+    line-height:10%;
+    margin-bottom:0;
+    margin-top:-2.5%
+}
+/* 
+Created on : 12-Mar-2017, 19:03:09
+Author     : Anastasija
+*/
